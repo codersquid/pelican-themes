@@ -1,6 +1,11 @@
 <p>{{ article.locale_date }} </p>
 
 <p style="text-align: left;">
+{% if article.author %}
+<em>By <a class="url fn" href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a></em>
+</p>
+{% endif %} 
+<p style="text-align: left;">
 Filed under <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
 </p>
 <p style="text-align: left;">
